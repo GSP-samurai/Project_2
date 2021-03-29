@@ -1,0 +1,42 @@
+.works
+    &__wrapper
+        display: flex
+        flex: 1 1 0
+    &__item
+        position: relative
+        background: linear-gradient(#57e65e, #f0ae63)
+    &__info
+        opacity: 0
+        position: absolute
+        width: 100%
+        padding: 0 15px 
+        z-index: 1
+        top: 50%
+        transform: translate3d(0, -50%, 0)
+        text-align: center
+        color: #fff
+        transition: opacity 0.2s linear
+    &__image
+        display: block
+        transition: opacity 0.2s linear
+        max-width: 100%
+        height: auto
+    &__title
+        font-size: 14px
+        text-transform: uppercase
+        margin-bottom: 5px
+        font-family: 'Montserrat', sans-serif
+    &__text
+        font-size: 15px
+        font-family: 'Roboto', sans-serif
+        font-style: italic
+        font-weight: 300
+    &__icon
+        margin-bottom: 10px
+    &__section-title
+        margin-top: 21px
+
+.works__item:hover .works__image
+    opacity: 0.3
+.works__item:hover .works__info
+    opacity: 1

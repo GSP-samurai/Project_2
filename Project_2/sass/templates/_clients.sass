@@ -1,0 +1,43 @@
+.clients
+    background: url('../img/clients/clients-bg.jpg') no-repeat center / cover
+    height: 830px
+    &__section-title
+        margin: 0 auto 94px
+        padding-top: 105px
+    &__wrapper
+        display: flex
+        flex-wrap: wrap
+    &__item
+        position: relative
+        flex-basis: 50%
+        padding-left: 180px
+        padding-right: 35px
+        &--last
+            margin-top: 72px
+    &__photo
+        position: absolute
+        top: -7px
+        left: 40px
+        z-index: 1
+    &__name
+        font-size: 13px
+        color: #333333
+        text-transform: uppercase
+        font-weight: 600
+        margin-bottom: 5px
+    &__position
+        font-size: 15px
+        font-family: 'Roboto', sans-serif
+        font-style: italic
+        font-weight: 300
+        &::after
+           content: ''
+           display: block
+           width: 60px
+           height: 3px
+           background-color: #f38181
+           margin: 14px 0 20px
+    &__text
+        font-size: 15px
+        font-family: 'Roboto', sans-serif
+        color: #999999

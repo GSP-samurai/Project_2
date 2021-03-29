@@ -1,0 +1,113 @@
+.header
+    width: 100%
+    position: absolute
+    padding-top: 17px
+    top: 0
+    left: 0
+    right: 0
+    z-index: 1000
+    &__logo
+        font-weight: bold
+        font-size: 29px
+        color: #fff
+    &__inner
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__nav
+        display: flex
+        justify-content: space-between
+        width: 100%
+        max-width: 617px
+        font-size: 14px
+        text-transform: uppercase
+
+.header.fixed
+    background-color: #e98583
+    position: fixed
+    padding: 8px 0
+    top: 0
+    right: 0
+    transform: translate3d(0, 0, 0)
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2)
+
+.header.active
+    background-color: #e98583
+
+.nav
+    &__link
+        position: relative
+        display: inline-block
+        vertical-align: top
+        padding-top: 10px
+        color: #fff
+        text-decoration: none
+        transition: color 0.1s linear
+        &::after
+            content: ''
+            opacity: 0
+            width: 100%
+            height: 3px
+            position: absolute
+            background-color: #fce38a
+            transition: opacity 0.1s linear
+            top: 100%
+            left: 0
+            z-index: 1
+        &:hover
+            color: #fce38a
+            &::after
+                opacity: 1
+
+.nav__link.active
+    color: #fce38a
+
+.nav-toggle
+    position: absolute
+    top: 18px
+    right: 26px
+    z-index: 1
+    width: 30px
+    padding: 12px 0
+    border: 0
+    background: none
+    cursor: pointer
+    display: none
+    outline: none
+    &__item
+        display: block
+        width: 100%
+        height: 3px
+        background-color: #fff
+        position: absolute
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        margin: auto
+        font-size: 0
+        color: transparent
+        transition: background 0.2s linear
+        &::before, &::after
+            content: ''
+            display: block
+            width: 100%
+            height: 3px
+            background-color: #fff
+            position: absolute
+            left: 0
+            z-index: 1
+            transition: transform 0.2s linear
+
+.nav-toggle__item::before
+    top: -10px
+.nav-toggle__item::after
+    bottom: -10px
+.nav-toggle.active .nav-toggle__item
+    background: none
+.nav-toggle.active .nav-toggle__item::before
+    transform-origin: top left
+    transform: rotate(45deg)
+.nav-toggle.active .nav-toggle__item::after
+    transform-origin: bottom left
+    transform: rotate(-45deg)

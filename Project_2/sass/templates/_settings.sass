@@ -1,0 +1,49 @@
+*, *::before, *::after
+    box-sizing: border-box
+
+body
+    margin: 0
+    font-family: 'Montserrat', sans-serif
+    font-size: 15px
+    color: #333333
+    line-height: 1.6
+
+main
+    overflow: hidden
+
+.container
+    width: 100%
+    max-width: 1230px
+    margin: 0 auto
+    padding: 0 15px
+
+h1, h2, h3, h4, h5, h6
+    margin: 0
+
+.section-title
+    margin: 0 auto 98px
+    padding-top: 85px
+    width: 100%
+    max-width: 960px
+    text-align: center
+    &__suptitle
+        font-family: 'Kaushan Script', cursive
+        font-size: 24px
+        color: #333333
+        margin-bottom: 3px
+    &__heading
+        text-transform: uppercase
+        font-weight: bold
+        font-size: 30px
+        color: #333333
+        &::after
+            content: ''
+            display: block
+            width: 60px
+            height: 3px
+            background-color: #f38181
+            margin: 26px auto 0px
+    &__text
+        margin-top: 41px
+        font-family: 'Roboto', sans-serif
+        color: #999999
